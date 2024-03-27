@@ -1,6 +1,3 @@
-// const { Router } = require("express");
-// const router = Router();
-
 const router = require("express").Router()
 const activity = require("./ActivityRoutes/activitysRoutes");
 const countrie = require("./CountriesRoutes/contriesRoutes");
