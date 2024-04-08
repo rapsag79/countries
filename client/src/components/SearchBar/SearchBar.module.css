@@ -1,0 +1,11 @@
+/* Reglas generales para todas las pantallas */
+.search-box {
+  margin: 0 0 2rem 0;
+  display: flex;
+  height: 6rem;
+  width: 83.2rem;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: blanchedalmond;
+}

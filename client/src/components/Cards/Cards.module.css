@@ -1,0 +1,16 @@
+.cardsContenedor {
+  width: 85vw;
+  margin-left: 6rem;
+  display: grid;
+  /* justify-content: center; */
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 10px;
+  position: relative;
+}
+
+.counter {
+  display: flex;
+  /* margin-top: 102rem; */
+  /* margin-right: 100rem; */
+}

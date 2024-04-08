@@ -1,4 +1,4 @@
-const { getCountriesHandler,getDetailCountrieHandler, postCountriesHandler } = require("../../handlers/ContriesHandler/countriesHandler");
+const { getCountriesHandler,getDetailCountrieHandler } = require("../../handlers/ContriesHandler/countriesHandler");
 const { Countries } = require("../../db");
 
 const countrie = require("express").Router()
