@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { validateForm } from '../Validate/validateForm';
 
+import styles from"./Form.module.css"
+
 const Formulario = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -108,62 +110,95 @@ const Formulario = () => {
   });
 };
 
-
-
   return (
-    <form onSubmit={handleSubmit}>
+    <div className={styles.div}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <label>
-        Name:
+        <b>
+          Name
+        </b>
+          <br/>
         <input
           type="text"
-          name="name"
+            name="name"
+            placeholder='Ingresa un nombre'
           value={formData.name}
           onChange={handleChange}
-        />
+          className={styles.input}
+          />
       </label>
-      <span>{errors.name}</span>
+      <span className={styles.error}>{errors.name}</span>
       <br />
       <label>
-        Difficulty:
+        <b>
+          Difficulty
+        </b>
+          <br/>
         <input
           type="text"
-          name="difficulty"
+            name="difficulty"
+            placeholder='Ingresa una dificultad'
           value={formData.difficulty}
           onChange={handleChange}
-        />
+          className={styles.input}
+          />
       </label>
-      <span>{errors.difficulty}</span>
+      <span className={styles.error}>{errors.difficulty}</span>
       <br />
       <label>
-        Duration:
+        <b>
+          Duration
+        </b>
+          <br/>
         <input
           type="number"
-          name="duration"
+            name="duration"
+            placeholder='Ingresa una duración de la actividad'
           value={formData.duration}
           onChange={handleChange}
-        />
+          className={styles.input}
+          />
       </label>
-      <span>{errors.duration}</span>
+      <span className={styles.error}>{errors.duration}</span>
       <br />
       <label>
-        Season:
+        <b>
+        Season
+        </b>
+        <br/>
         <input
           type="text"
-          name="season"
+            name="season"
+            placeholder='Ingresa una temporada ("Primavera, Verano, Otoño, Invierno")'
           value={formData.season}
           onChange={handleChange}
-        />
+          className={styles.input}
+          />
       </label>
-      <span>{errors.season}</span>
-      <br />
-      <label>
-        Countries:
+      <span className={styles.error}>{errors.season}</span>
+        <br />
+        <label>
+          <b>
+          Countries:
+          </b>
+           <label>
+        <span className={styles["texto-pais"]}>
+        {formData.countriesId.map((countryId) => {
+          const country = allCountries.find((c) => c.id === countryId.toString());
+          return <ul key={countryId}>{country ? country.name : 'Unknown'}</ul>;
+        }
+      )
+    }
+        </span>
+      </label>
+          <br />
         <select
           multiple
           name="countriesId"
           value={formData.countriesId}
           onChange={handleCountryChange}
-        >
+          className={styles.select}
+          >
           {allCountries.map((country) => (
             <option key={country.id} value={country.id}>
               {country.name}
@@ -171,20 +206,12 @@ const Formulario = () => {
           ))}
         </select>
       </label>
-      <span>{errors.countriesId}</span>
+      <span className={styles.error}>{errors.countriesId}</span>
       <br />
-      <div>
-        Selected Countries:
-        <ul>
-          {formData.countriesId.map((countryId) => {
-            const country = allCountries.find((c) => c.id === parseInt(countryId));
-            return <li key={countryId}>{country ? country.name : 'Unknown'}</li>;
-          })}
-        </ul>
-      </div>
       <br />
       <button type="submit">Submit</button>
     </form>
+  </div>
   );
 };
 

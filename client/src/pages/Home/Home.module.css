@@ -1,3 +1,24 @@
 .home {
-  width: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #55acee;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #2e8b57;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }

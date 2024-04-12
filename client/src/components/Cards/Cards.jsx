@@ -6,6 +6,21 @@ const Cards = ({ currentCountries }) => {
 
   return (
     <div className={styles["cardsContenedor"]}>
+
+      {/* <section>
+      <button>
+      <select>
+        Order
+      </select>
+      </button>
+
+      <button>
+      <select>
+        Filter
+      </select>
+      </button>
+      </section > */}
+
       {currentCountries.map((country) => (
         <Card
           key={country.id}

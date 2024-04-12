@@ -21,25 +21,30 @@ const Detail = () => {
     return setCountrie([]);
    }, [id])
 
-  console.log(countrie);
+  // console.log(countrie);
   
    return (
      <div className={styles["container"]}>
-       <h2 className={styles["texto"]}>Nombre: { countrie.name }</h2>
+       
+       <section className={styles["card"]}>
+         <button
+            className={`${styles.closeButton} closeButton`}
+            onClick={() => navigate(-1)} // retrocede en la historia del navegador
+            >
+            X
+          </button >
+         
+       <h2 className={styles["texto-ttulo"]}> { countrie.name }</h2>
        <img src={countrie.flags} alt=" bandera" className={styles["img"]}/>
        <p className={styles["texto"]}>Continent: {countrie.continent}</p>
        <p className={styles["texto"]}>Capital: {countrie.capital}</p>
-       {countrie.subregion && <p>Subregión: {countrie.subregion}</p>}
-      {countrie.area && <p>Área: {countrie.area} km</p>}
+       {countrie.subregion && <p className={styles["texto"]}>Subregión: {countrie.subregion}</p>}
+      {countrie.area && <p className={styles["texto"]}>Área: {countrie.area} km</p>}
        <p className={styles["texto"]}>Población: {countrie.population} habitantes</p>
-       <p className={styles["texto"]}>Actividades: {countrie.Acvivities}</p>
+      <p className={styles["texto"]}>Actividades: {countrie.Activities && countrie.Activities.map(activity => activity.name).join(', ')}</p>
 
-        <button
-            className={`${styles.closeButton} closeButton`}
-            onClick={() => navigate(-1)} // retrocede en la historia del navegador
-          >
-            Back
-          </button >
+        
+      </section>
     </div>
   )
 }

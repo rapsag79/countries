@@ -1,29 +1,50 @@
-.div {
+.container {
+  width: 50rem;
+  margin: 0 auto;
+  background-color: aqua;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 35.5rem;
-  padding: 5rem;
-  background-color: rgba(255, 213, 151, 0.79);
 }
 
-.button {
-  margin-top: 1.6rem;
+section {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .h2 {
-  color: rgb(249, 237, 220);
+  text-align: center;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
-@media screen {
-  .div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 35.5rem;
-    padding: 5rem;
-    background-color: rgba(255, 213, 151, 0.79);
-  }
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  justify-content: center;
+  background-color: #ffa500;
+  text-decoration: none;
+  font-size: xx-large;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  height: 5rem;
+}
+
+.button:hover {
+  background-color: #ff8c00;
+}
+
+.link {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #274a359b; /* Verde Esmeralda para resaltar los enlaces */
+  text-decoration: solid;
+  font-weight: bolder;
+  font-size: 900;
 }

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsContainer {
+  width: 85vw;
+  margin-left: 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Cambiado el min-width a 300px */
+  gap: 6rem; /* Aumentado el espacio entre columnas */
+  position: relative;
+}
+
+.NavLink {
+  display: flex;
+  margin-top: -1rem;
+  margin-left: 70rem;
+  margin-bottom: 2rem;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
