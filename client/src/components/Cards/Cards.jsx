@@ -1,25 +1,11 @@
-import { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import styles from "./Cards.module.css";
 
-const Cards = ({ currentCountries }) => {
+const Cards = ({ currentCountries}) => {
+
 
   return (
     <div className={styles["cardsContenedor"]}>
-
-      {/* <section>
-      <button>
-      <select>
-        Order
-      </select>
-      </button>
-
-      <button>
-      <select>
-        Filter
-      </select>
-      </button>
-      </section > */}
 
       {currentCountries.map((country) => (
         <Card

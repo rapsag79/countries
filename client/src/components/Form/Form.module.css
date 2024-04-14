@@ -115,7 +115,7 @@ label {
 
 .texto-pais ul {
   display: flex;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }

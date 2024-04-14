@@ -1,14 +1,36 @@
-/* Reglas generales para todas las pantallas */
 .search-box {
   margin: -4rem 0 2rem 0;
   display: flex;
   height: 6rem;
-  width: 83.2rem;
+  width: 100%;
+  border-radius: 0.5rem;
   justify-content: space-evenly;
   align-items: center;
   background-color: #ff8c00;
 }
 
 .h2 {
-  color: #274a359b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input[type="search"] {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
 }
