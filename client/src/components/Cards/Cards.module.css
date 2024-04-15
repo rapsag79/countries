@@ -1,10 +1,9 @@
 .cardsContenedor {
   width: 85vw;
-  margin-left: 1rem;
   display: grid;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 10px;
+  gap: 1rem;
   position: relative;
 }

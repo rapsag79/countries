@@ -39,8 +39,9 @@ const Detail = () => {
        <p className={styles["texto"]}>Continent: {countrie.continent}</p>
        <p className={styles["texto"]}>Capital: {countrie.capital}</p>
        {countrie.subregion && <p className={styles["texto"]}>Subregión: {countrie.subregion}</p>}
-      {countrie.area && <p className={styles["texto"]}>Área: {countrie.area} km</p>}
-       <p className={styles["texto"]}>Población: {countrie.population} habitantes</p>
+      {countrie.area && <p className={styles["texto"]}>Área: {countrie.area.toLocaleString()} km</p>}
+       <p className={styles["texto"]}>Población: {countrie.population && countrie.population.toLocaleString()} habitantes</p>
+
       <p className={styles["texto"]}>Actividades: {countrie.Activities && countrie.Activities.map(activity => activity.name).join(', ')}</p>
 
         

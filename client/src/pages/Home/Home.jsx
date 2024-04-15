@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Cards from "../../components/Cards/Cards";
+
 import { getAllCountries } from "../../redux/action/action";
 import filterCountriesByActivitys from "../../helpers/filterCountriesByActivitys";
 
@@ -73,7 +74,7 @@ if (filterByActivity) {
   return (
     <div className={styles["home"]}>
       {/* Sección de filtros y opciones */}
-      <section>
+      <section className={styles.section}>
         <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
           <option value="">Ordenar</option>
           <option value="name_asc">Nombre (A-Z)</option>
@@ -105,13 +106,9 @@ if (filterByActivity) {
           ))}
         </select>
 
-
-
-
       </section>
 
-      {/* Sección de cartas */}
-      <div>
+      <div className={styles.cards}>
         <Cards currentCountries={filteredAndSortedCountries} />
       </div>
       

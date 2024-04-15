@@ -15,10 +15,6 @@
   background-color: bisque;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
 .texto {
   color: black;
   font-style: oblique;
