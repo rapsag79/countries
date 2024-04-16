@@ -112,7 +112,10 @@ const Formulario = () => {
 
   return (
     <div className={styles.div}>
+
+
     <form className={styles.form} onSubmit={handleSubmit}>
+      <h2 className={styles.titulo}>Nueva Actividad</h2>
       <label>
         <b>
           Name

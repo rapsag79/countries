@@ -18,7 +18,7 @@ function App() {
       <Header />
       </div>
       {location.pathname !== "/" && (
-        <div className="nav-container"> 
+        <div> 
           <SearchBar />
         </div>
       )}

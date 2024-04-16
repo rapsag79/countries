@@ -26,6 +26,7 @@ export function getCountriesByName(name) {
         }
     };
 }
+
 export function getCountriesById(id) {
     return async (dispatch) => {
         try {

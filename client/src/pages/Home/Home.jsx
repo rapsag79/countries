@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Cards from "../../components/Cards/Cards";
+// import SearchBar from "../../components/SearchBar/SearchBar";
 
 import { getAllCountries } from "../../redux/action/action";
 import filterCountriesByActivitys from "../../helpers/filterCountriesByActivitys";
@@ -73,6 +74,7 @@ if (filterByActivity) {
 
   return (
     <div className={styles["home"]}>
+      {/* <SearchBar/> */}
       {/* Sección de filtros y opciones */}
       <section className={styles.section}>
         <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>

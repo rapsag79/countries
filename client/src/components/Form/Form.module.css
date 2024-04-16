@@ -1,25 +1,33 @@
-/* .div {
+.div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .form {
-  max-width: 100%;
+  max-width: 50%;
   overflow: auto;
-  height: auto;
-  width: 30rem;
+  width: 90%; /* Utilizar porcentajes para el ancho */
+  /* max-width: 30rem;  */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 227, 185);
-  border: 0.2rem solid white;
+  background-image: url("https://media.istockphoto.com/id/1367756031/es/vector/ilustraci%C3%B3n-de-fondo-de-acuarela-azul.jpg?s=612x612&w=0&k=20&c=1zYbGJsjBY-zdGlFr7HPuA0_KBSuAKGuYF8SkeEXm0U=");
+  border: 0.2rem solid #ff8c00;
   border-radius: 1rem;
-  padding: 2rem;
+  /* padding: 2rem; */
+}
+
+.titulo {
+  margin-bottom: -0.5rem;
+  font-weight: 900;
+  font-size: xx-large;
 }
 
 label {
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,20 +35,24 @@ label {
 
 .input {
   margin-top: -3rem;
+  margin-bottom: -3rem;
   height: 3rem;
-  width: 29rem;
+  width: 100%; /* Utilizar porcentajes para el ancho */
   border-radius: 0.5rem;
   background-color: rgb(67, 74, 74);
-  border: 0.2rem solid #ff8c00;
+  border: 0.18rem solid #ff8c00;
   font-size: large;
 }
 
 .select {
   margin-top: -3rem;
+  margin-bottom: -4rem;
   border-radius: 0.5rem;
   background-color: rgb(67, 74, 74);
   color: rgb(255, 255, 255);
   border: 0.2rem solid #ff8c00;
+  width: 90%; /* Utilizar porcentajes para el ancho */
+  max-width: 29rem; /* Límite máximo de ancho */
 }
 
 .error {
@@ -48,8 +60,13 @@ label {
   font-weight: 600;
 }
 
+.texto-pais {
+  font-size: medium;
+  font-weight: 700;
+  padding: 0 1rem 0.5rem 1rem;
+}
 .texto-pais ul {
-  display: inline;
+  display: inline-flex;
   margin: 0;
   padding: 0;
 }
@@ -59,76 +76,6 @@ label {
 }
 
 .texto-pais ul:last-child::after {
-  content: "";
-} */
-
-.div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form {
-  max-width: 100%;
-  overflow: auto;
-  width: 90%; /* Utilizar porcentajes para el ancho */
-  max-width: 30rem; /* Límite máximo de ancho */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(241, 241, 241);
-  border: 0.2rem solid #ff8c00;
-  border-radius: 1rem;
-  padding: 2rem;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.input {
-  height: 3rem;
-  width: 90%; /* Utilizar porcentajes para el ancho */
-  max-width: 29rem; /* Límite máximo de ancho */
-  border-radius: 0.5rem;
-  background-color: rgb(67, 74, 74);
-  border: 0.2rem solid #ff8c00;
-  font-size: large;
-}
-
-.select {
-  border-radius: 0.5rem;
-  background-color: rgb(67, 74, 74);
-  color: rgb(255, 255, 255);
-  border: 0.2rem solid #ff8c00;
-  width: 90%; /* Utilizar porcentajes para el ancho */
-  max-width: 29rem; /* Límite máximo de ancho */
-}
-
-.error {
-  color: red;
-  font-weight: 600;
-}
-
-.texto-pais ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.texto-pais ul li {
-  display: inline; /* Alinear los elementos en línea */
-}
-
-.texto-pais ul li:not(:last-child)::after {
-  content: ", ";
-}
-
-.texto-pais ul li:last-child::after {
   content: "";
 }
 
