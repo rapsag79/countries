@@ -12,3 +12,9 @@
   font-size: large;
   color: rgb(4, 20, 20);
 }
+
+.img {
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+}
