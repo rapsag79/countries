@@ -42,7 +42,12 @@ const Detail = () => {
       {countrie.area && <p className={styles["texto"]}>Área: {countrie.area.toLocaleString()} km</p>}
        <p className={styles["texto"]}>Población: {countrie.population && countrie.population.toLocaleString()} habitantes</p>
 
-      <p className={styles["texto"]}>Actividades: {countrie.Activities && countrie.Activities.map(activity => activity.name).join(', ')}</p>
+      {countrie.Activities && countrie.Activities.length > 0 && (
+  <p className={styles["texto"]}>
+    Actividades: {countrie.Activities.map(activity => activity.name).join(', ')}
+  </p>
+)}
+
 
         
       </section>

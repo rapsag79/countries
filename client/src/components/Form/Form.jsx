@@ -36,17 +36,23 @@ const Formulario = () => {
     fetchCountries();
   }, []);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-    setErrors({
-      ...errors,
-      [name]: validateForm(name, value)
-    });
-  };
+ const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+const handleChange = (event) => {
+  const { name, value } = event.target;
+  const capitalizedValue = capitalizeFirstLetter(value); // Convertir la primera letra a mayúscula
+  setFormData({
+    ...formData,
+    [name]: capitalizedValue
+  });
+  setErrors({
+    ...errors,
+    [name]: validateForm(name, capitalizedValue)
+  });
+};
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();

@@ -36,6 +36,11 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.buttons {
+  display: flex;
+  justify-content: baseline;
+}
+
 .header {
   margin-top: -10rem;
 }

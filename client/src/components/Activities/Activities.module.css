@@ -5,14 +5,11 @@
 
 .cardsContainer {
   width: 85vw;
-  margin-left: 1rem;
   display: grid;
+  justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Cambiado el min-width a 300px */
-  gap: 6rem; /* Aumentado el espacio entre columnas */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1rem;
   position: relative;
 }
 

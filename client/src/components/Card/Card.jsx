@@ -16,7 +16,7 @@ const Card = ({
        <Link to={`/home/${id}`}>
        <img src={flags} alt=" bandera" className={styles["img"]}/>
        <h2 className={styles["texto"]}>{ name }</h2>
-         <p className={styles["texto"]}>{continent}</p>
+         <h2 className={styles["texto"]}>{continent}</h2>
        </Link>
 
     </div>

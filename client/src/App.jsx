@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Activities from './components/Activities/Activities';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Aboutme from "./components/Aboutme/Aboutme";
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
           element={<Home />}
           />
         <Route path="/home/:id" element={<Detail />} />
+        <Route path="/aboutme" element={<Aboutme/>} />
       </Routes>
       </section>
       <div>

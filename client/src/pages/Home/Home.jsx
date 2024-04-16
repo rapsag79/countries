@@ -1,54 +1,43 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import Cards from "../../components/Cards/Cards";
-// import SearchBar from "../../components/SearchBar/SearchBar";
-
 import { getAllCountries } from "../../redux/action/action";
 import filterCountriesByActivitys from "../../helpers/filterCountriesByActivitys";
 
 import styles from "./Home.module.css";
 
 function Home() {
-  // State y constantes
   const dispatch = useDispatch();
   const { allCountries } = useSelector((state) => state);
-
-  // console.log(allCountries);
+  const location = useLocation();
 
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 10;
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
 
-  // Estados para filtros y orden
   const [sortBy, setSortBy] = useState("");
   const [filterByContinent, setFilterByContinent] = useState("");
   const [filterByActivity, setFilterByActivity] = useState("");
   const [filteredAndSortedCountries, setFilteredAndSortedCountries] = useState([]);
 
-  // Efecto para obtener todos los países
   useEffect(() => {
     dispatch(getAllCountries());
   }, [dispatch]);
 
-  // Efecto para filtrar y ordenar países
   useEffect(() => {
     let filteredCountries = allCountries;
 
-    // Filtrar por continente
     if (filterByContinent) {
       filteredCountries = filteredCountries.filter((country) => country.continent === filterByContinent);
     }
 
-    // Filtrar por actividad turística
-    // Filtrar por actividad turística
-if (filterByActivity) {
-  filteredCountries = filterCountriesByActivitys(filteredCountries, filterByActivity);
-}
+    if (filterByActivity) {
+      filteredCountries = filterCountriesByActivitys(filteredCountries, filterByActivity);
+    }
 
-
-    // Ordenar los países
     if (sortBy === "name_asc") {
       filteredCountries = filteredCountries.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortBy === "name_desc") {
@@ -59,11 +48,9 @@ if (filterByActivity) {
       filteredCountries = filteredCountries.sort((a, b) => b.population - a.population);
     }
 
-    // Actualizar estado de países filtrados y ordenados
     setFilteredAndSortedCountries(filteredCountries.slice(indexOfFirstCountry, indexOfLastCountry));
   }, [allCountries, filterByContinent, filterByActivity, sortBy, currentPage]);
 
-  // Funciones para paginación
   const nextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
@@ -74,8 +61,6 @@ if (filterByActivity) {
 
   return (
     <div className={styles["home"]}>
-      {/* <SearchBar/> */}
-      {/* Sección de filtros y opciones */}
       <section className={styles.section}>
         <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
           <option value="">Ordenar</option>
@@ -95,31 +80,32 @@ if (filterByActivity) {
           <option value="Oceania">Oceanía</option>
         </select>
 
-       <select value={filterByActivity} onChange={(event) => setFilterByActivity(event.target.value)}>
+        <select value={filterByActivity} onChange={(event) => setFilterByActivity(event.target.value)}>
           <option value="">Filtrar por Actividad</option>
-          {allCountries && allCountries.map((country) => (
-            country.Activities && country.Activities.map((activity) => (
-              activity.name
-            ))
-          )).flat().filter((value, index, self) => self.indexOf(value) === index).map((activityName) => (
-            <option key={activityName} value={activityName}>
-              {activityName}
-            </option>
-          ))}
+          {allCountries &&
+            allCountries
+              .flatMap((country) => country.Activities && country.Activities.map((activity) => activity.name))
+              .filter((value, index, self) => self.indexOf(value) === index)
+              .map((activityName) => (
+                <option key={activityName} value={activityName}>
+                  {activityName}
+                </option>
+              ))}
         </select>
-
       </section>
 
       <div className={styles.cards}>
         <Cards currentCountries={filteredAndSortedCountries} />
       </div>
-      
-      {/* Sección de botones de paginación */}
-      <div>
-        <button onClick={prevPage} disabled={currentPage === 1}>
+
+      <div className={styles.buttons}>
+        <button onClick={prevPage} disabled={currentPage === 1 || location.pathname === "/activities"}>
           Anterior
         </button>
-        <button onClick={nextPage}>Siguiente</button>
+
+        <button onClick={nextPage} disabled={filteredAndSortedCountries.length < 10 }>
+          Siguiente
+        </button>
       </div>
     </div>
   );

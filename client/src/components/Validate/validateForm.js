@@ -36,8 +36,8 @@ export const validateName = (value) => {
 };
 
 export const validateDifficulty = (value) => {
-  if (!["facil", "medio", "dificil"].includes(value)) {
-    return "La dificultad debe ser 'facil', 'medio' o 'dificil'";
+  if (!["Facil", "Medio", "Dificil"].includes(value)) {
+    return "La dificultad debe ser 'Facil', 'Medio' o 'Dificil'";
   }
   return "";
 };

@@ -1,33 +1,25 @@
 .div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .form {
-  max-width: 50%;
+  max-width: 100%;
   overflow: auto;
-  width: 90%; /* Utilizar porcentajes para el ancho */
-  /* max-width: 30rem;  */
+  height: auto;
+  /* width: 30rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("https://media.istockphoto.com/id/1367756031/es/vector/ilustraci%C3%B3n-de-fondo-de-acuarela-azul.jpg?s=612x612&w=0&k=20&c=1zYbGJsjBY-zdGlFr7HPuA0_KBSuAKGuYF8SkeEXm0U=");
-  border: 0.2rem solid #ff8c00;
+  border: 0.2rem solid white;
   border-radius: 1rem;
-  /* padding: 2rem; */
-}
-
-.titulo {
-  margin-bottom: -0.5rem;
-  font-weight: 900;
-  font-size: xx-large;
+  padding: 2rem;
 }
 
 label {
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,24 +27,20 @@ label {
 
 .input {
   margin-top: -3rem;
-  margin-bottom: -3rem;
   height: 3rem;
-  width: 100%; /* Utilizar porcentajes para el ancho */
+  width: 29rem;
   border-radius: 0.5rem;
   background-color: rgb(67, 74, 74);
-  border: 0.18rem solid #ff8c00;
+  border: 0.2rem solid #ff8c00;
   font-size: large;
 }
 
 .select {
   margin-top: -3rem;
-  margin-bottom: -4rem;
   border-radius: 0.5rem;
   background-color: rgb(67, 74, 74);
   color: rgb(255, 255, 255);
   border: 0.2rem solid #ff8c00;
-  width: 90%; /* Utilizar porcentajes para el ancho */
-  max-width: 29rem; /* Límite máximo de ancho */
 }
 
 .error {
@@ -60,13 +48,8 @@ label {
   font-weight: 600;
 }
 
-.texto-pais {
-  font-size: medium;
-  font-weight: 700;
-  padding: 0 1rem 0.5rem 1rem;
-}
 .texto-pais ul {
-  display: inline-flex;
+  display: inline;
   margin: 0;
   padding: 0;
 }
@@ -77,17 +60,4 @@ label {
 
 .texto-pais ul:last-child::after {
   content: "";
-}
-
-@media (max-width: 768px) {
-  .form {
-    width: 100%; /* Utilizar el 100% del ancho en pantallas más pequeñas */
-    max-width: none; /* Eliminar el límite máximo de ancho */
-  }
-
-  .input,
-  .select {
-    width: 100%; /* Utilizar el 100% del ancho en pantallas más pequeñas */
-    max-width: none; /* Eliminar el límite máximo de ancho */
-  }
 }

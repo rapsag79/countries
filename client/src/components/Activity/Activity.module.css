@@ -11,11 +11,15 @@
   width: 20rem;
   max-width: 400px; /* Ancho máximo del contenedor de actividad */
   padding: 2.5rem;
+  cursor: pointer;
+  -moz-osx-font-smothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
 }
 
 .container-activity:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 
 .texto {
