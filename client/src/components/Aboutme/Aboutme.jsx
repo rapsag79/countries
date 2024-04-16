@@ -1,5 +1,4 @@
 import styles from "./Aboutme.module.css"
-import Francisco from "../../../public/FranciscoC.png"
 
 const Aboutme = () => {
   return (
