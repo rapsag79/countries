@@ -34,8 +34,9 @@ const Detail = () => {
             X
           </button >
          
-       <h2 className={styles["texto-ttulo"]}> { countrie.name }</h2>
+       <h2 className={styles["texto-ttulo"]}> { countrie.id }</h2>
        <img src={countrie.flags} alt=" bandera" className={styles["img"]}/>
+       <h2 className={styles["texto-ttulo"]}> { countrie.name }</h2>
        <p className={styles["texto"]}>Continent: {countrie.continent}</p>
        <p className={styles["texto"]}>Capital: {countrie.capital}</p>
        {countrie.subregion && <p className={styles["texto"]}>Subregión: {countrie.subregion}</p>}

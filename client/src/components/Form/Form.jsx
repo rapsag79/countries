@@ -217,8 +217,9 @@ const handleChange = (event) => {
       </label>
       <span className={styles.error}>{errors.countriesId}</span>
       <br />
-      <br />
-      <button type="submit">Submit</button>
+        <br />
+        {errors.name || errors.difficulty  || errors.duration || errors.season ? null:<button type="submit">Submit</button>}
+      
     </form>
   </div>
   );
