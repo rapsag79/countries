@@ -37,17 +37,19 @@ const SearchBar = () => {
         )}
       </div>
       <div>
-        {(location.pathname === "/home" || location.pathname === "/activities") && (
+        {(location.pathname === "/home" || location.pathname === "/activities" || location.pathname === "/create") && (
           <Link to={"/aboutme"}>
             <button className={styles.h2}>About me</button>
           </Link>
         )}
       </div>
       <br />
-      <form onChange={handleChange} >
-        <input placeholder="Busqueda" type="search"/>
-        <button onClick={handleSubmit} type="submit">Buscar</button>
-      </form>
+      {location.pathname === "/home" && ( // Condición para mostrar el formulario solo en la ruta "/home"
+        <form onChange={handleChange} >
+          <input placeholder="Busqueda" type="search"/>
+          <button onClick={handleSubmit} type="submit">Buscar</button>
+        </form>
+      )}
     </div>
   );
 }
