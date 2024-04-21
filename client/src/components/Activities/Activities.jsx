@@ -58,13 +58,6 @@ const Activities = () => {
           />
         ))}
       </div>
-
-      <div>
-        <button onClick={prevPage} disabled={currentPage === 1}>
-          Anterior
-        </button>
-        <button onClick={nextPage}>Siguiente</button>
-      </div>
     </div>
   );
 };

@@ -66,15 +66,18 @@ const handleChange = (event) => {
     });
 
     if (Object.keys(formErrors).length === 0) {
-      console.log(formData);
-      await axios.post('http://localhost:3001/activities', formData);
+
+      const response = await axios.post('http://localhost:3001/activities', formData);
+
+      console.log(response.status)
       setFormData({
         name: '',
         difficulty: '',
         duration: '',
         season: '',
         countriesId: []
-      });
+      }
+      );
       setErrors({
         name: '',
         difficulty: '',

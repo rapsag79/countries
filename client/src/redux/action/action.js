@@ -71,9 +71,8 @@ export function getAllActivities() {
 export function createActivity(activityData) {
     return async (dispatch) => {
         try {
-            const response = await axios.post("http://localhost:3001/activities", activityData);
-            // Despachar una acción si es necesario (por ejemplo, para actualizar el estado con la nueva actividad creada)
-            console.log(response.data); // Puedes imprimir la respuesta del servidor si deseas verificarla
+             await axios.post("http://localhost:3001/activities", activityData);
+            // Despachar una acción si es necesario (por ejemplo, para actualizar el estado con la nueva actividad creada); // Puedes imprimir la respuesta del servidor si deseas verificarla
 
             // Si quieres actualizar el estado de actividades después de crear una nueva actividad, puedes llamar a la acción getAllActivities nuevamente.
             // Esto es opcional y depende de cómo desees manejar los datos en tu aplicación.

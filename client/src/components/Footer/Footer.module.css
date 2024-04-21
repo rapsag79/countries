@@ -1,7 +1,8 @@
 .container_foother {
   display: flex;
   justify-content: center;
-  height: 4rem;
+  align-items: center;
+  height: 6.5rem;
   width: 100%;
   background-color: #fff200;
   margin-top: 1rem;
@@ -9,7 +10,7 @@
 }
 
 .text {
-  font-size: xx-small;
-  font-weight: 200;
+  font-size: x-small;
+  font-weight: 600;
   color: black;
 }

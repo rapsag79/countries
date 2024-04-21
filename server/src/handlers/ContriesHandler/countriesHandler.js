@@ -1,22 +1,5 @@
 const {getAllCountries, getCountrieByName, getCountrieById
 } = require('../../Controllers/CountriesControllers/countriesController');
-// const { saveCountriesDB } = require('../../utils/Countries/saveCountriesDB');
-
-// const getCountriesHandler = async (req, res) => {
-//   const { name } = req.query;
-//   try {if (name) {
-//     const countrie = await getCountrieByName(name)
-//     res.status(200).json(countrie)
-//   } else {
-//     const countries = await getAllCountries(req, res);
-//     res.status(200).json(countries)
-//     // return countries
-//   }
-//   } catch (error) {
-//     res.status(400).json({error:error.message})
-//   }
-  
-// }
 
 const getCountriesHandler = async (req, res) => {
     const { name } = req.query;
