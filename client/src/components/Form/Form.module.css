@@ -8,7 +8,6 @@
   max-width: 100%;
   overflow: auto;
   height: auto;
-  /* width: 30rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,4 +59,29 @@ label {
 
 .texto-pais ul:last-child::after {
   content: "";
+}
+
+.country-suggestions {
+  position: absolute;
+  background-color: #ffffff92;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin-top: 5.6rem;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 150px; /* Limitar la altura para que se pueda desplazar */
+  max-width: 15rem;
+  z-index: 1;
+}
+
+.country-suggestion {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.country-suggestion:hover {
+  background-color: #343333;
+  color: aliceblue;
 }

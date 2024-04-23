@@ -16,28 +16,7 @@ const Activities = () => {
     dispatch(getAllActivities());
   }, [dispatch]);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const activitiesPerPage = 10; // Cambiado a activitiesPerPage
 
-  if (!allActivities) {
-    return (
-      <div>
-        Cree una nueva actividad <NavLink to="/create">Aqui</NavLink>
-      </div>
-    );
-  }
-
-  const indexOfLastActivities = currentPage * activitiesPerPage; // Corregido a activitiesPerPage
-  const indexOfFirstActivity = indexOfLastActivities - activitiesPerPage; // Corregido a activitiesPerPage
-  const currentActivities = allActivities.slice(indexOfFirstActivity, indexOfLastActivities);
-
-  const nextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
-  };
 
   return (
     <div className={styles.container}>
@@ -46,7 +25,7 @@ const Activities = () => {
       </button>
 
       <div className={styles.cardsContainer}>
-        {currentActivities.map((activity) => (
+        {allActivities.map((activity) => (
           <Activity
             key={activity.id}
             id={activity.id}

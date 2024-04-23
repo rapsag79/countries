@@ -10,11 +10,11 @@ const Activity = ({
 }) => {
   return (
     <div className={styles["container-activity"]}>
-      <h2 className={styles["texto"]}>Nombre: {name}</h2>
-      <p className={styles["texto"]}>Dificultad: {difficulty}</p>
-      <p className={styles["texto"]}>Duración: {duration}</p>
-      <p className={styles["texto"]}>Temporada: {season}</p>
-      <p className={`${styles["texto"]} ${styles["texto-pais"]}`}>País: {countries}</p>
+      <h2 className={styles["texto"]}> <b>Nombre:</b> {name}</h2>
+      <p className={styles["texto"]}> <b>Dificultad:</b> {difficulty}</p>
+      <p className={styles["texto"]}> <b>Duración:</b> {duration}</p>
+      <p className={styles["texto"]}> <b>Temporada:</b> {season}</p>
+      <p className={`${styles["texto"]} ${styles["texto-pais"]}`}> <b>País:</b> {countries}</p>
     </div>
   );
 };

@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   height: 27rem;
+  width: 18rem;
   align-items: center;
   flex-direction: column;
   background-image: url("https://media.istockphoto.com/id/1328989318/es/vector/hermoso-paisaje-fluvial.jpg?s=612x612&w=0&k=20&c=lg4XqOfft-slHZgFyRj67nwEjkifbReKL-6pJOgonLM=");
   border: 0.3rem solid rgb(255, 255, 255);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 1rem;
   padding: 0.5rem;
   cursor: pointer;
