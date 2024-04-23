@@ -43,12 +43,13 @@ export const validateDifficulty = (value) => {
 };
 
 export const validateDuration = (value) => {
-  const durationValue = parseInt(value);
-  if (isNaN(durationValue) || durationValue <= 1 || durationValue >= 1440) {
-    return "La duración debe ser mayor a 1 hora y menor a 1440 minutos (24 horas)";
+  const validDurations = ["15 min", "30 min", "1 hr", "1.15 hrs", "1.30 hrs", "2 hrs"];
+  if (!validDurations.includes(value)) {
+    return "La duración debe ser una de las opciones proporcionadas";
   }
   return "";
 };
+
 
 export const validateSeason = (value) => {
   if (!["Primavera", "Verano", "Otoño", "Invierno"].includes(value)) {
