@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   gap: 1rem;
   position: relative;
 }
@@ -21,4 +21,18 @@
   width: 12rem;
   height: 3rem;
   border-radius: 0.5rem;
+} */
+
+.container {
+  margin: 20px;
+}
+
+.navLink {
+  margin-bottom: 10px;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }

@@ -1,4 +1,4 @@
-.container-activity {
+/* .container-activity {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,8 +9,7 @@
   padding: 1.5rem;
   margin-bottom: 2rem;
   width: 20rem;
-  max-width: 400px; /* Ancho máximo del contenedor de actividad */
-  padding: 2.5rem;
+  max-width: 400px;
   cursor: pointer;
   -moz-osx-font-smothing: grayscale;
   backface-visibility: hidden;
@@ -36,4 +35,41 @@
 
 .texto-pais {
   margin-top: 1rem;
+} */
+
+.containerActivity {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerActivity:hover {
+  transform: scale(1.1);
+}
+
+.texto {
+  margin: 0;
+}
+
+.activityDetails {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.containerActivity:hover .texto1 {
+  display: none;
+}
+
+.containerActivity:hover .activityDetails {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.textoPais {
+  margin-top: 10px;
 }
